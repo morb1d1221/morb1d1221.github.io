@@ -1,0 +1,18 @@
+body {
+  min-width: 850px;
+}
+
+h1 {
+  font-size: 31px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 31px;
+  text-transform: uppercase;
+}
+
+img {
+  width: 210px;
+}
