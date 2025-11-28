@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ваше имя - Персональный сайт</title>
+    <title>morb1d - музыка</title>
     <style>
         body {
-            background-color: #FFFFFF;
+            background: url('https://img.freepik.com/premium-vector/black-white-pattern-abstract-texture-abstract-background-design-vector-illustration_685067-1711.jpg');
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -14,36 +14,29 @@
             display: flex;
             flex-direction: column;
         }
-        
         .header {
             text-align: center;
-            padding: 40px 20px 20px 20px;
+            padding: 40px 20px 20px;
         }
-        
         .header h1 {
             font-family: cursive;
-            color: #000000;
+            color: #000;
             font-size: 2.5em;
             margin: 0;
-            font-weight: normal;
         }
-        
         .subtitle {
             font-family: cursive;
-            color: #000000;
+            color: #000;
             font-size: 1.8em;
-            margin: 20px 0 0 0;
-            font-weight: normal;
+            margin: 20px 0 0;
         }
-        
         .note {
-            color: #999999;
+            color: #999;
             font-size: 0.9em;
-            margin: 10px 0 0 0;
+            margin: 10px 0 0;
             font-style: italic;
         }
-        
-        .buttons-container {
+        .buttons {
             text-align: center;
             padding: 30px 20px;
             display: flex;
@@ -51,14 +44,13 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-        
-        .icon-button {
+        .btn {
             padding: 0;
-            border: 2px solid #000000;
-            background-color: transparent;
+            border: 2px solid #000;
+            background: transparent;
             border-radius: 10px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -67,138 +59,60 @@
             height: 100px;
             overflow: hidden;
         }
-        
-        .icon-button img {
+        .btn img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
-        
-        .icon-button:hover {
-            background-color: #000000;
+        .btn:hover {
+            background: #000;
             transform: translateY(-2px);
         }
-        
-        .icon-button:hover img {
+        .btn:hover img {
             filter: invert(1);
         }
-        
-        .center-image {
+        .main-btn {
             text-align: center;
             margin-top: auto;
             margin-bottom: 0;
             padding-bottom: 20px;
         }
-        
-        .image-button {
+        .main-btn img {
             max-width: 300px;
             width: 80%;
-            height: auto;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            background: none;
-            padding: 0;
-            display: inline-block;
+            transition: all 0.3s;
         }
-        
-        .image-button:hover {
+        .main-btn img:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
             filter: invert(1);
         }
-        
-        .image-button:active {
-            transform: scale(0.95);
-        }
-
-        /* Медиа-запросы для адаптации под мобильные устройства */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .subtitle {
-                font-size: 1.5em;
-            }
-            
-            .icon-button {
-                width: 90px;
-                height: 90px;
-            }
-            
-            .buttons-container {
-                gap: 15px;
-            }
-            
-            .image-button {
-                max-width: 250px;
-                width: 70%;
-            }
+            .header h1 { font-size: 2em; }
+            .subtitle { font-size: 1.5em; }
+            .btn { width: 90px; height: 90px; }
+            .buttons { gap: 15px; }
+            .main-btn img { max-width: 250px; width: 70%; }
         }
-
         @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.7em;
-                padding: 30px 15px 15px 15px;
-            }
-            
-            .subtitle {
-                font-size: 1.3em;
-                margin: 15px 0 0 0;
-            }
-            
-            .note {
-                font-size: 0.8em;
-                margin: 8px 0 0 0;
-            }
-            
-            .icon-button {
-                width: 80px;
-                height: 80px;
-            }
-            
-            .buttons-container {
-                padding: 20px 15px;
-                gap: 12px;
-            }
-            
-            .image-button {
-                max-width: 200px;
-                width: 60%;
-                padding-bottom: 40px;
-            }
+            .header h1 { font-size: 1.7em; padding: 30px 15px 15px; }
+            .subtitle { font-size: 1.3em; margin: 15px 0 0; }
+            .note { font-size: 0.8em; margin: 8px 0 0; }
+            .btn { width: 80px; height: 80px; }
+            .buttons { padding: 20px 15px; gap: 12px; }
+            .main-btn img { max-width: 200px; width: 60%; padding-bottom: 40px; }
         }
-
         @media (max-width: 320px) {
-            .header h1 {
-                font-size: 1.4em;
-            }
-            
-            .subtitle {
-                font-size: 1.1em;
-            }
-            
-            .note {
-                font-size: 0.7em;
-            }
-            
-            .icon-button {
-                width: 70px;
-                height: 70px;
-            }
-            
-            .buttons-container {
-                gap: 10px;
-            }
-            
-            .image-button {
-                max-width: 150px;
-                width: 50%;
-            }
+            .header h1 { font-size: 1.4em; }
+            .subtitle { font-size: 1.1em; }
+            .note { font-size: 0.7em; }
+            .btn { width: 70px; height: 70px; }
+            .buttons { gap: 10px; }
+            .main-btn img { max-width: 150px; width: 50%; }
         }
     </style>
 </head>
@@ -209,26 +123,25 @@
         <div class="note">(my music is not like his music)</div>
     </div>
     
-    <div class="buttons-container">
-        <!-- Telegram Button -->
-        <a href="https://t.me/morb1dmusic" class="icon-button" target="_blank">
+    <div class="buttons">
+        <!-- Телеграм -->
+        <a href="https://t.me/morb1dmusic" class="btn" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/121/121521.png" alt="Telegram">
         </a>
-        
-        <!-- Yandex Music Button -->
-        <a href="https://music.yandex.ru/artist/24912939?utm_source=web&utm_medium=copy_link" class="icon-button" target="_blank">
+        <!-- Яндекс Музыка -->
+        <a href="https://music.yandex.ru/artist/24912939?utm_source=web&utm_medium=copy_link" class="btn" target="_blank">
             <img src="https://i.ibb.co/0j23SVVx/yandex-music-new-photoaidcom-invert.jpg" alt="Yandex Music">
         </a>
-        
-        <!-- SoundCloud Button -->
-        <a href="https://soundcloud.com/matvej-silin-97447874?ref=clipboard&p=a&c=1&si=b96cc5ba0e5244ba87f51ad6260754c4&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="icon-button" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/91/91958.png" alt="SoundCloud">
+        <!-- SoundCloud -->
+        <a href="https://soundcloud.com/matvej-silin-97447874?ref=clipboard&p=a&c=1&si=b96cc5ba0e5244ba87f51ad6260754c4&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="btn" target="_blank">
+            <img src="data:image/png;base64,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" alt="SoundCloud">
         </a>
     </div>
     
-    <div class="center-image">
+    <div class="main-btn">
         <a href="https://aphextwin.warp.net/?srsltid=AfmBOorjS_ptXTovDHNmTA-EvKCwn2IPGe60XzbmLz18de6ZnIk0FOjg" target="_blank">
-            <img src="https://tiku.ru/wp-content/uploads/2017/01/Aphex-Twin-Logo-700x700.jpg.webp" alt="Aphex Twin Logo" class="image-button">
+            <img src="https://tiku.ru/wp-content/uploads/2017/01/Aphex-Twin-Logo-700x700.jpg.webp" alt="Aphex Twin Logo">
         </a>
     </div>
 </body>
+</html>
